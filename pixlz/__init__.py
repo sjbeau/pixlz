@@ -13,7 +13,6 @@ class Pixlz:
 		self.font = "Courier"
 		self.font_size = 12
 		self.bg = "black"
-		self.fg = "white"
 		self.frame_file_prefix = "pxz"
 		self.tbox = None
 
@@ -32,7 +31,6 @@ class Pixlz:
 		font:str | None = None,
 		font_size:int | None = None,
 		bg:str | None = None,
-		fg:str | None = None,
 		demo:bool | None = None
 	):
 		if xres is not None: self.xres = xres
@@ -42,7 +40,6 @@ class Pixlz:
 		if font is not None: self.font=font
 		if font_size is not None: self.font_size = font_size
 		if bg is not None: self.bg = bg
-		if fg is not None: self.fg = fg
 		if demo is not None:
 			if demo is True: self.frame_file_prefix = "example_pxz"
 
@@ -85,7 +82,7 @@ class Pixlz:
 			width=self.xres,
 			height=self.yres,
 			font=(self.font, self.font_size),
-			bg=self.bg,fg=self.fg,
+			bg=self.bg,
 			padx=0,pady=0,
 			borderwidth=0,
 			highlightthickness=0,
